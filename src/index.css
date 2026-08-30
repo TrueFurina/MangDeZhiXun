@@ -1,0 +1,145 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 222 84% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+    /* 商务蓝主色 #165DFF */
+    --primary: 218 100% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    /* 成长绿 #00B42A */
+    --success: 142 100% 35%;
+    --success-foreground: 0 0% 100%;
+    /* 行动橙 #FF7D00 */
+    --warning: 30 100% 50%;
+    --warning-foreground: 0 0% 100%;
+    /* 警示红 #F53F3F */
+    --destructive: 0 91% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 218 100% 54%;
+    /* 图表配色 */
+    --chart-1: 218 100% 54%;
+    --chart-2: 142 100% 35%;
+    --chart-3: 30 100% 50%;
+    --chart-4: 280 80% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 84% 5%;
+    --sidebar-primary: 218 100% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 218 100% 54%;
+    
+    /* 渐变定义 */
+    --gradient-primary: linear-gradient(135deg, hsl(218, 100%, 54%), hsl(200, 95%, 50%));
+    --gradient-card: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(210, 20%, 98%));
+    --gradient-background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 98%) 100%);
+    
+    /* 阴影定义 */
+    --shadow-card: 0 2px 8px rgba(22, 93, 255, 0.08);
+    --shadow-hover: 0 8px 24px rgba(22, 93, 255, 0.15);
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+    /* 商务蓝主色（深色模式） */
+    --primary: 218 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 18%;
+    --accent-foreground: 210 40% 98%;
+    /* 成长绿（深色模式） */
+    --success: 142 100% 40%;
+    --success-foreground: 0 0% 100%;
+    /* 行动橙（深色模式） */
+    --warning: 30 100% 55%;
+    --warning-foreground: 0 0% 100%;
+    /* 警示红（深色模式） */
+    --destructive: 0 91% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 218 100% 60%;
+    /* 图表配色（深色模式） */
+    --chart-1: 218 100% 60%;
+    --chart-2: 142 100% 40%;
+    --chart-3: 30 100% 55%;
+    --chart-4: 280 80% 65%;
+    --chart-5: 340 75% 60%;
+    --sidebar-background: 210 100% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 200 95% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 40% 20%;
+    --sidebar-ring: 200 95% 50%;
+    
+    /* 暗色模式渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(200, 95%, 50%), hsl(220, 80%, 55%));
+    --gradient-card: linear-gradient(to bottom, hsl(210, 80%, 12%), hsl(210, 70%, 15%));
+    --gradient-background: linear-gradient(180deg, hsl(210, 100%, 8%) 0%, hsl(210, 80%, 12%) 100%);
+    
+    /* 暗色模式阴影 */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+}

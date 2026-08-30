@@ -1,0 +1,1 @@
+GRANT SELECT ON public.student_talent TO authenticated, anon;
