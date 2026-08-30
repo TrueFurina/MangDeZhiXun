@@ -44,6 +44,7 @@ interface SavedPlan {
 export default function LearningPlanPage() {
   const navigate = useNavigate();
   const { user } = useAuth();
+  const userEmail = user?.email || localStorage.getItem('student_email') || '';
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
   const [plan, setPlan] = useState<SavedPlan | null>(null);
@@ -92,6 +93,20 @@ export default function LearningPlanPage() {
     };
     load();
   }, [user]);
+
+  // 加载已持久化的任务完成状态（按当前计划）
+  useEffect(() => {
+    const loadCompleted = async () => {
+      if (!plan) { setCompletedTasks(new Set()); return; }
+      const { data } = await supabase
+        .from('learning_plan_task')
+        .select('task_key')
+        .eq('plan_id', plan.id)
+        .eq('is_completed', true);
+      setCompletedTasks(new Set((data || []).map((d: any) => d.task_key)));
+    };
+    loadCompleted();
+  }, [plan]);
 
   const generatePlan = useCallback(async () => {
     if (!hasAnalysis) {
@@ -144,18 +159,31 @@ export default function LearningPlanPage() {
     }
   }, [hasAnalysis, targetInfo, user]);
 
-  const toggleTask = (week: number, courseId: number) => {
+  const toggleTask = async (week: number, courseId: number) => {
     const key = `${week}-${courseId}`;
+    const nextDone = !completedTasks.has(key);
     setCompletedTasks(prev => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
       return next;
     });
+    // 持久化到数据库
+    if (plan) {
+      await supabase.from('learning_plan_task').upsert({
+        user_email: userEmail,
+        plan_id: plan.id,
+        task_key: key,
+        is_completed: nextDone,
+        completed_at: nextDone ? new Date().toISOString() : null,
+        updated_at: new Date().toISOString(),
+      }, { onConflict: 'plan_id,task_key' });
+    }
   };
 
   const totalTasks = plan?.plan_data?.weeks?.reduce((s, w) => s + (w.tasks?.length || 0), 0) || 0;
-  const doneTasks = plan ? Array.from(completedTasks).filter(k => k.startsWith('')).length : 0;
+  const planTaskKeys = plan?.plan_data?.weeks?.flatMap(w => (w.tasks || []).map(t => `${w.week}-${t.course_id}`)) || [];
+  const doneTasks = planTaskKeys.filter(k => completedTasks.has(k)).length;
   const progressPct = totalTasks > 0 ? Math.round((doneTasks / totalTasks) * 100) : 0;
 
   if (loading) {

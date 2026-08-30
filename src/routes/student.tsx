@@ -14,6 +14,7 @@ const JobRecommend = lazy(() => import('@/pages/student/JobRecommendPage'));
 const StudentProfile = lazy(() => import('@/pages/student/ProfilePage'));
 const AIInterview = lazy(() => import('@/pages/student/AIInterviewPage'));
 const AIInterviewReport = lazy(() => import('@/pages/student/AIInterviewReportPage'));
+const InterviewReviewLibrary = lazy(() => import('@/pages/student/InterviewReviewLibraryPage'));
 const VipCenter = lazy(() => import('@/pages/student/VipCenterPage'));
 const AICareerDiagnosis = lazy(() => import('@/pages/student/AICareerDiagnosisPage'));
 const AbilityProfile = lazy(() => import('@/pages/student/AbilityProfilePage'));
@@ -79,6 +80,7 @@ export const studentRoutes: RouteObject[] = [
           { path: 'profile', element: S(StudentProfile) },
           { path: 'ai-interview', element: S(AIInterview) },
           { path: 'ai-interview/report/:id', element: S(AIInterviewReport) },
+          { path: 'interview-review', element: S(InterviewReviewLibrary) },
           { path: 'vip', element: S(VipCenter) },
           { path: 'diagnosis', element: S(AICareerDiagnosis) },
           { path: 'ability-profile', element: S(AbilityProfile) },

@@ -182,6 +182,7 @@ export default function AbilityTreePage() {
                     {targetInfo.position || '目标岗位'}
                     {targetInfo.company && <span className="text-muted-foreground font-normal"> · {targetInfo.company}</span>}
                   </div>
+                  <p className="text-xs text-muted-foreground mt-1">数据基于 JD 拆解分析结果生成，能力维度与缺口实时映射</p>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">{overallScore}%</div>

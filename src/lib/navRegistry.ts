@@ -1,4 +1,4 @@
-import { Home, FileText, TrendingUp, Building2, BarChart3, Target, Calendar, Briefcase, Flame, BookOpen, Globe, Swords, Sparkles, GitCompare, BarChart2, Users, Award, Radar, ClipboardList, CreditCard, ShieldCheck, ArrowLeftRight, LayoutDashboard, Search, MessageSquare, type LucideIcon } from 'lucide-react';
+import { Home, FileText, TrendingUp, Building2, BarChart3, Target, Calendar, Briefcase, Flame, BookOpen, Globe, Swords, Sparkles, GitCompare, BarChart2, Users, Award, Radar, ClipboardList, CreditCard, ShieldCheck, ArrowLeftRight, LayoutDashboard, Search, MessageSquare, History, type LucideIcon } from 'lucide-react';
 
 export interface NavItem {
   label: string;
@@ -27,6 +27,7 @@ export const navRegistry: Record<string, NavItem[]> = {
     { label: '深度研究中心', path: '/student/deep-research', icon: BookOpen, keywords: ['研究'] },
     { label: '网页内容总结', path: '/student/web-summary', icon: Globe, keywords: ['网页', '总结'] },
     { label: 'AI深度特训', path: '/student/ai-interview', icon: Swords, keywords: ['面试', '特训'] },
+    { label: '面试复盘库', path: '/student/interview-review', icon: History, keywords: ['面试', '复盘', '趋势'] },
     { label: 'AI就业咨询', path: '/student/career-consulting', icon: Sparkles, keywords: ['咨询', '职业'] },
     { label: '能力对标验证', path: '/student/jobs', icon: Briefcase, keywords: ['岗位', '对标'] },
   ],
@@ -63,4 +64,4 @@ export const navRegistry: Record<string, NavItem[]> = {
   ],
 };
 
-export const iconMap = { Home, FileText, TrendingUp, Building2, BarChart3, Target, Calendar, Briefcase, Flame, BookOpen, Globe, Swords, Sparkles, GitCompare, BarChart2, Users, Award, Radar, ClipboardList, CreditCard, ShieldCheck, ArrowLeftRight, LayoutDashboard, Search, MessageSquare };
+export const iconMap = { Home, FileText, TrendingUp, Building2, BarChart3, Target, Calendar, Briefcase, Flame, BookOpen, Globe, Swords, Sparkles, GitCompare, BarChart2, Users, Award, Radar, ClipboardList, CreditCard, ShieldCheck, ArrowLeftRight, LayoutDashboard, Search, MessageSquare, History };
