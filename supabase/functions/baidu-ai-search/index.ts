@@ -65,7 +65,7 @@ serve(withMonitor("baidu-ai-search", async (req: Request): Promise<Response> => 
 
   // --- 调用上游（SSE 流式） ---
   const upstream = await fetch(
-    "https://app-a7lm1eejtypt-api-DYJwo27V8Qya-gateway.appmiaoda.com/v2/ai_search/chat/completions",
+    "https://app-e2nysotcr1fl-api-DYJwo27V8Qya-gateway.appmiaoda.com/v2/ai_search/chat/completions",
     {
       method: "POST",
       headers: {

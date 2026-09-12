@@ -137,7 +137,7 @@ Deno.serve(async (req) => {
     userPrompt += '请提供详细的评估和改进建议。';
 
     // 调用AI API
-    const apiUrl = 'https://app-a7lm1eejtypt-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
+    const apiUrl = 'https://app-e2nysotcr1fl-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
     
     const response = await fetch(apiUrl, {
       method: 'POST',

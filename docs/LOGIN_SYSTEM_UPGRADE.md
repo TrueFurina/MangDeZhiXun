@@ -53,7 +53,7 @@
 
 **API调用**:
 ```typescript
-POST https://app-a7lm1eejtypt-api-W9z3M74x6ZNL-gateway.appmiaoda.com/v1/code/send_message
+POST https://app-e2nysotcr1fl-api-W9z3M74x6ZNL-gateway.appmiaoda.com/v1/code/send_message
 Headers:
   X-Gateway-Authorization: Bearer ${INTEGRATIONS_API_KEY}
   Content-Type: application/json
@@ -87,7 +87,7 @@ Body:
 
 **API调用**:
 ```typescript
-POST https://app-a7lm1eejtypt-api-Xa6JZxjyqK0a-gateway.appmiaoda.com/v1/code/verify_message_code
+POST https://app-e2nysotcr1fl-api-Xa6JZxjyqK0a-gateway.appmiaoda.com/v1/code/verify_message_code
 Headers:
   X-Gateway-Authorization: Bearer ${INTEGRATIONS_API_KEY}
   Content-Type: application/json

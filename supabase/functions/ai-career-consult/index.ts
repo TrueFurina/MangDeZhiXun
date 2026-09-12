@@ -96,7 +96,7 @@ Deno.serve(withMonitor("ai-career-consult", async (req) => {
     userPrompt += '\n\n请基于用户的背景，提供专业、实用的就业咨询建议。';
 
     // 调用AI API
-    const apiUrl = 'https://app-a7lm1eejtypt-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
+    const apiUrl = 'https://app-e2nysotcr1fl-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
     
     const response = await fetch(apiUrl, {
       method: 'POST',

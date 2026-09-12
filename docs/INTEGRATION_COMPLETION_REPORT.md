@@ -281,7 +281,7 @@
 如有问题或需要进一步支持，请参考：
 - 秒哒后台：https://app-aateh5gojg1t.appmiaoda.com/
 - 技术文档：/docs/ 目录下的所有文档
-- 项目代码：/workspace/app-a7lm1eejtypt/
+- 项目代码：/workspace/app-e2nysotcr1fl/
 
 ---
 

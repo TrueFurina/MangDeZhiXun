@@ -35,7 +35,7 @@ serve(withMonitor("company-hiring-stats", async (req) => {
       });
     }
 
-    const response = await fetch('https://app-a7lm1eejtypt-api-zYkZzErqJg4L-gateway.appmiaoda.com/enterprise/hire-statistics', {
+    const response = await fetch('https://app-e2nysotcr1fl-api-zYkZzErqJg4L-gateway.appmiaoda.com/enterprise/hire-statistics', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

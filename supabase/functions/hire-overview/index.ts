@@ -37,7 +37,7 @@ async function handler(req: Request): Promise<Response> {
   let upstream: Response;
   try {
     upstream = await fetch(
-      'https://app-a7lm1eejtypt-api-Aa2PZ2MejdoL-gateway.appmiaoda.com/enterprise/hire-overview',
+      'https://app-e2nysotcr1fl-api-Aa2PZ2MejdoL-gateway.appmiaoda.com/enterprise/hire-overview',
       {
         method: 'POST',
         headers: {

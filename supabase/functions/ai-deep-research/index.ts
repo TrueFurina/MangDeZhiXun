@@ -42,7 +42,7 @@ serve(withMonitor("ai-deep-research", async (req: Request): Promise<Response> =>
   if (action === "create") {
     try {
       const upstream = await fetch(
-        "https://app-a7lm1eejtypt-api-ELbWqrZ1krJY-gateway.appmiaoda.com/v2/agent/deepresearch/create",
+        "https://app-e2nysotcr1fl-api-ELbWqrZ1krJY-gateway.appmiaoda.com/v2/agent/deepresearch/create",
         {
           method: "POST",
           headers: {
@@ -77,7 +77,7 @@ serve(withMonitor("ai-deep-research", async (req: Request): Promise<Response> =>
       if (body.structured_outline) upstreamBody.structured_outline = body.structured_outline;
 
       const upstream = await fetch(
-        "https://app-a7lm1eejtypt-api-ELbWqrZ1krJY-gateway.appmiaoda.com/v2/agent/deepresearch/run",
+        "https://app-e2nysotcr1fl-api-ELbWqrZ1krJY-gateway.appmiaoda.com/v2/agent/deepresearch/run",
         {
           method: "POST",
           headers: {

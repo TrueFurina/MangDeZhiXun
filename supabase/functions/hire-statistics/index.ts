@@ -92,7 +92,7 @@ Deno.serve(async (req) => {
     }
 
     // 调用第三方API
-    const apiUrl = 'https://app-a7lm1eejtypt-api-zYkZzErqJg4L-gateway.appmiaoda.com/enterprise/hire-statistics';
+    const apiUrl = 'https://app-e2nysotcr1fl-api-zYkZzErqJg4L-gateway.appmiaoda.com/enterprise/hire-statistics';
     
     const formData = new URLSearchParams();
     formData.append('keyword', keyword);

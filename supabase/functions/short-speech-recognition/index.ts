@@ -26,7 +26,7 @@ serve(async (req: Request): Promise<Response> => {
       throw new Error("Server configuration error: INTEGRATIONS_API_KEY");
     }
 
-    const apiUrl = "https://app-a7lm1eejtypt-api-Aa2PZnjEw5NL-gateway.appmiaoda.com/server_api";
+    const apiUrl = "https://app-e2nysotcr1fl-api-Aa2PZnjEw5NL-gateway.appmiaoda.com/server_api";
 
     const response = await fetch(apiUrl, {
       method: "POST",

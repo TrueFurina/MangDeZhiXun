@@ -92,7 +92,7 @@ ${resumeContent}
 请对该候选人进行全面评估，并以JSON格式返回结果。`;
 
     // 调用AI API
-    const apiUrl = 'https://app-a7lm1eejtypt-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
+    const apiUrl = 'https://app-e2nysotcr1fl-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
     
     const response = await fetch(apiUrl, {
       method: 'POST',

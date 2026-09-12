@@ -1,7 +1,7 @@
 import { withMonitor } from "../_shared/logger.ts";
 
 const UPSTREAM_URL =
-  "https://app-a7lm1eejtypt-api-DY8MNXjBpKAa-gateway.appmiaoda.com/v2/components/c-wf-e1bc471f-1d33-4df1-ab42-87800e89c1ad";
+  "https://app-e2nysotcr1fl-api-DY8MNXjBpKAa-gateway.appmiaoda.com/v2/components/c-wf-e1bc471f-1d33-4df1-ab42-87800e89c1ad";
 
 /**
  * 网页内容总结 Edge Function

@@ -40,7 +40,7 @@ serve(async (req: Request): Promise<Response> => {
     params.append('vol', '5'); // 音量
     params.append('per', '1'); // 发音人
 
-    const apiUrl = "https://app-a7lm1eejtypt-api-e94GZ5j0ljja-gateway.appmiaoda.com/text2audio";
+    const apiUrl = "https://app-e2nysotcr1fl-api-e94GZ5j0ljja-gateway.appmiaoda.com/text2audio";
 
     const response = await fetch(apiUrl, {
       method: "POST",

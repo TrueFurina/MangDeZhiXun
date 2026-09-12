@@ -58,7 +58,7 @@ Deno.serve(async (req) => {
 
     // 调用文心大模型API
     const response = await fetch(
-      'https://app-a7lm1eejtypt-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions',
+      'https://app-e2nysotcr1fl-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions',
       {
         method: 'POST',
         headers: {

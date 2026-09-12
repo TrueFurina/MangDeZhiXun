@@ -39,7 +39,7 @@ Deno.serve(async (req) => {
 
     // 调用百度短信验证码API
     const response = await fetch(
-      'https://app-a7lm1eejtypt-api-W9z3M74x6ZNL-gateway.appmiaoda.com/v1/code/send_message',
+      'https://app-e2nysotcr1fl-api-W9z3M74x6ZNL-gateway.appmiaoda.com/v1/code/send_message',
       {
         method: 'POST',
         headers: {

@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
 
     // Step 1: 通过平台短信网关校验验证码（仅用于校验，登录态由 Supabase Auth 建立）
     const verifyResponse = await fetch(
-      'https://app-a7lm1eejtypt-api-Xa6JZxjyqK0a-gateway.appmiaoda.com/v1/code/verify_message_code',
+      'https://app-e2nysotcr1fl-api-Xa6JZxjyqK0a-gateway.appmiaoda.com/v1/code/verify_message_code',
       {
         method: 'POST',
         headers: {

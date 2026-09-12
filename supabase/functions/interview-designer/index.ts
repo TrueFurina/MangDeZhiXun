@@ -69,7 +69,7 @@ ${candidateInfo || '未提供'}
 3. 所有内容用中文，专业、具体、可执行
 4. 严格输出纯 JSON，不要任何额外说明`;
 
-    const response = await fetch('https://app-a7lm1eejtypt-api-zYkZzErqJg4L-gateway.appmiaoda.com/llm/text-generation', {
+    const response = await fetch('https://app-e2nysotcr1fl-api-zYkZzErqJg4L-gateway.appmiaoda.com/llm/text-generation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

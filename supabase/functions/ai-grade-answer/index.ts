@@ -77,7 +77,7 @@ ${dimension ? `考察维度：${dimension}` : ''}
 请根据以上信息进行评分，并以JSON格式返回结果。`;
 
     // 调用文心大模型API
-    const apiUrl = 'https://app-a7lm1eejtypt-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
+    const apiUrl = 'https://app-e2nysotcr1fl-api-zYkZz8qovQ1L-gateway.appmiaoda.com/v2/chat/completions';
     
     const response = await fetch(apiUrl, {
       method: 'POST',
