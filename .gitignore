@@ -32,3 +32,12 @@ history/*.json
 package.json.[0-9]*
 .native-wind-cache
 .vite
+
+# ── 密钥与凭据（禁止入库）────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+# 微信支付配置：密钥只能放 Supabase secrets，禁止提交
+WECHAT_PAY_CONFIG.md
